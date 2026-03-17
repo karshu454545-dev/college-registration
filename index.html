@@ -4,38 +4,42 @@
 <head>
   <title>College Registration</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>Sri Aditya Degree College</h1>
+  <div class="header">
+    <img src="left-logo.png" class="logo left">
+    <h1>Sri Aditya Degree College</h1>
+    <img src="right-logo.png" class="logo right">
+  </div>
 
-<form onsubmit="sendToWhatsApp(); return false;">
+  <form onsubmit="sendToWhatsApp(); return false;">
 
-<label>Student Name</label>
-<input type="text" id="name" placeholder="Enter your name" required>
+    <label>Student Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
 
-<label>Mobile Number</label>
-<input type="tel" id="mobile" placeholder="Enter mobile number" required>
+    <label>Mobile Number</label>
+    <input type="tel" id="mobile" placeholder="Enter mobile number" required>
 
-<label>Select Course</label>
-<select id="course" required>
-<option value="">-- Select Course --</option>
-<option>BCA (Data Science)</option>
-<option>BSc (Data Science)</option>
-<option>BCA (General)</option>
-<option>BCom</option>
-<option>BBA</option>
-<option>BBA (Digital Marketing)</option>
-<option>Bsc Computers</option>
-<option>Bsc AIR (Artificial Intelligence and Robotics)</option>
-</select>
+    <label>Select Course</label>
+    <select id="course" required>
+      <option value="">-- Select Course --</option>
+      <option>Bsc AI (Artificial Intelligence)</option>
+      <option>BCA (Data Science)</option>
+      <option>BSc (Data Science)</option>
+      <option>BCA (General)</option>
+      <option>BCom</option>
+      <option>BBA (Digital Marketing)</option>
+      <option>Bsc Computers</option>
+    </select>
 
-<button type="submit">Submit</button>
+    <button type="submit">Submit</button>
 
-</form>
+  </form>
 
 </div>
 
@@ -52,7 +56,7 @@ let message =
 "Mobile: " + mobile + "\n" +
 "Course: " + course;
 
-let phone = "917670888674";   // replace with your number
+let phone = "919876543210"; // your number
 
 let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
 
@@ -62,5 +66,4 @@ window.open(url, "_blank");
 </script>
 
 </body>
-
 </html>
